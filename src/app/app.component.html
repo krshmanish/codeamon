@@ -3,14 +3,15 @@
 <div class="container app-container">
   <ng-container  *ngIf='isAvailable'>
     <mat-card class='card' *ngFor='let card of data'>
-      <mat-card-title>Name : {{card.first_name + ' ' + card.last_name}}</mat-card-title>
+      <mat-card-title>
+        {{card.first_name + ' ' + card.last_name}}
+        <mat-card-subtitle class='subtitle'>({{card?.list_title_desc}})</mat-card-subtitle>
+      </mat-card-title>
       <mat-card-content>List No : {{card?.list_no}}</mat-card-content>
       <mat-card-content>Exam No : {{card?.exam_no}}</mat-card-content>
-      <mat-card-content>List Title Desc : {{card?.list_title_desc}}</mat-card-content>
       <mat-card-content>List Agency Desc : {{card?.list_agency_desc}}</mat-card-content>
       <mat-card-content>Published Date : {{card?.published_date}}</mat-card-content>
     </mat-card>
   </ng-container>
   <div *ngIf='!isAvailable' class='not-found'>Search Not Found!</div>
 </div>
-

@@ -6,6 +6,7 @@
   width: 48%;
   box-sizing: border-box;
   margin-bottom: 14px;
+  background: linear-gradient(160deg, white 0, darkblue 100%);
 }
 
 .not-found {
@@ -17,4 +18,31 @@
   z-index: 2;
   position: fixed;
   top: 77px;
+}
+
+.subtitle {
+  display: inline;
+}
+@media only screen and (max-width: 800px) {
+  .card {
+    width: 100%;
+  }
+  .loader {
+    top: 60px;
+  }
+  .app-container {
+    margin-top: 76px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 94%;
+  }
+  .app-container {
+    margin-top: 170px;
+  }
+  .loader {
+    top: 156px;
+  }
 }
