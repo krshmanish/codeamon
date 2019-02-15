@@ -1,21 +1,14 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<app-header (searchClicked)='onSearchClicked($event)'></app-header>
+<div class="container app-container">
+  <ng-container  *ngIf='isAvailable'>
+    <mat-card class='card' *ngFor='let card of data'>
+      <mat-card-title>Name : {{card.first_name + ' ' + card.last_name}}</mat-card-title>
+      <mat-card-content>List No : {{card?.list_no}}</mat-card-content>
+      <mat-card-content>Exam No : {{card?.exam_no}}</mat-card-content>
+      <mat-card-content>List Title Desc : {{card?.list_title_desc}}</mat-card-content>
+      <mat-card-content>List Agency Desc : {{card?.list_agency_desc}}</mat-card-content>
+      <mat-card-content>Published Date : {{card?.published_date}}</mat-card-content>
+    </mat-card>
+  </ng-container>
+  <div *ngIf='!isAvailable' class='not-found'>Search Not Found!</div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
-<router-outlet></router-outlet>

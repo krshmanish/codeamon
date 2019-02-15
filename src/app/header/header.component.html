@@ -1,0 +1,11 @@
+<div class="container">
+  <form (ngSubmit)='onSearch()' [formGroup]="searchForm" class='container__form'>
+    <mat-form-field class='container__form__col'>
+      <input matInput placeholder="First Name" formControlName="firstName"/>
+    </mat-form-field>
+    <mat-form-field class='container__form__col'>
+      <input matInput placeholder="Last Name" formControlName="lastName"/>
+    </mat-form-field>
+    <button mat-button type='submit' class='search-btn'>Search</button>
+  </form>
+</div>
