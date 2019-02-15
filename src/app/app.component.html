@@ -1,3 +1,4 @@
+<mat-progress-bar mode="indeterminate" *ngIf='inProgress' class='loader'></mat-progress-bar>
 <app-header (searchClicked)='onSearchClicked($event)'></app-header>
 <div class="container app-container">
   <ng-container  *ngIf='isAvailable'>
