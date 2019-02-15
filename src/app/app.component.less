@@ -6,7 +6,7 @@
   width: 48%;
   box-sizing: border-box;
   margin-bottom: 14px;
-  background: linear-gradient(160deg, white 0, darkblue 100%);
+  background: linear-gradient(160deg, wheat 25%, white 60%);
 }
 
 .not-found {
@@ -23,15 +23,20 @@
 .subtitle {
   display: inline;
 }
-@media only screen and (max-width: 800px) {
-  .card {
-    width: 100%;
-  }
+
+
+@media only screen and (max-width: 1024px) {
   .loader {
     top: 60px;
   }
   .app-container {
     margin-top: 76px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .card {
+    width: 100%;
   }
 }
 
